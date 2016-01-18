@@ -1,0 +1,5 @@
+# enable ccache
+ac_add_options --with-ccache=/usr/bin/ccache
+
+# Output obj dir
+mk_add_options MOZ_OBJDIR=./obj-firefox-opt

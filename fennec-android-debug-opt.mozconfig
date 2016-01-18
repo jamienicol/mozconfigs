@@ -1,0 +1,15 @@
+# Build Fennec Android for ARM
+ac_add_options --enable-application=mobile/android
+ac_add_options --target=arm-linux-androideabi
+ac_add_options --with-android-sdk="/home/jamie/.mozbuild/android-sdk-linux"
+ac_add_options --with-android-ndk="/home/jamie/.mozbuild/android-ndk-r10e"
+
+# Debug options
+ac_add_options --enable-debug
+ac_add_options --enable-debug-symbols
+
+# enable ccache
+ac_add_options --with-ccache=/usr/bin/ccache
+
+# Output obj dir
+mk_add_options MOZ_OBJDIR=./obj-fennec-debug-opt

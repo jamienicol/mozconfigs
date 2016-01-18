@@ -1,0 +1,9 @@
+# Debug options
+ac_add_options --enable-debug
+ac_add_options --enable-debug-symbols
+
+# enable ccache
+ac_add_options --with-ccache=/usr/bin/ccache
+
+# Output obj dir
+mk_add_options MOZ_OBJDIR=./obj-firefox-debug-opt
