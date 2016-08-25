@@ -2,8 +2,15 @@
 ac_add_options --enable-debug
 ac_add_options --enable-debug-symbols
 
-# enable ccache
-ac_add_options --with-ccache=/usr/bin/ccache
+# Use ccache and icecc for faster builds, if available
+if [ $(which ccache) ]; then
+    ac_add_options --with-ccache
+
+    if [ $(which icecc) ]; then
+        mk_add_options 'export CCACHE_PREFIX=icecc'
+        mk_add_options MOZ_MAKE_FLAGS="-j32"
+    fi
+fi
 
 # Output obj dir
 mk_add_options MOZ_OBJDIR=./obj-firefox-debug-opt
