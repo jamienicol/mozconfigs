@@ -2,7 +2,7 @@
 ac_add_options --enable-application=mobile/android
 ac_add_options --target=arm-linux-androideabi
 ac_add_options --with-android-sdk="/home/jamie/.mozbuild/android-sdk-linux"
-ac_add_options --with-android-ndk="/home/jamie/.mozbuild/android-ndk-r10e"
+ac_add_options --with-android-ndk="/home/jamie/.mozbuild/android-ndk-r11b"
 
 # enable ccache
 ac_add_options --with-ccache=/usr/bin/ccache
